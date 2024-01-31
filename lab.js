@@ -10,7 +10,9 @@ console.log("===============================")
 
 
 const me = {
-  name:"Derrick",
+  firstName:"Derrick",
+  lastName:"Furtado",
+  title: "Boss",
   age: 39
 }
 
@@ -163,13 +165,21 @@ console.log("===============================")
 
 function greeting( obj ) {
   //Code Here
-  
+  let {title, firstName, lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
+console.log(greeting(me))
 
+
+
+
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
 
@@ -183,7 +193,26 @@ function greeting( obj ) {
 
 //Code Here
 
+statePopulation ={
+  utah: 4.5,
+  california: 15.7,
+  texas: 12.3,
+  arizona: 8.4
+}
 
+
+totalPopulation = () =>{
+  let {utah, california, texas, arizona} = statePopulation
+  console.log(utah + california + texas + arizona)
+}
+totalPopulation(statePopulation)
+
+
+
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -198,6 +227,26 @@ function greeting( obj ) {
 //Code Here
 
 
+macrosArr = {
+  carb: "15g",
+  fat: "9g",
+  protein: "34g"
+}
+
+ingredients = () =>{
+  let {carb, fat, protein} = macrosArr
+  const macros= [carb, fat, protein]
+  console.log("This is a macros array: ",macros)
+
+}
+ingredients(macrosArr)
+
+
+
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
@@ -218,7 +267,17 @@ var user = {
 */
 
 //Code Here
+console.log("Original: ",user)
 
+user.name = "Bryan G. Smith"
+user.email = "bryan.smith@devmountain.com"
+
+console.log("Updated: ",user)
+
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -227,6 +286,17 @@ var user = {
 
 //Code Here
 
+delete user.age
+console.log("Delete age: ", user)
+
+
+
+
+
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -237,7 +307,24 @@ var user = {
 
 //Code here
 
+class Cat {
+  constructor(name, age, color)
+  this.name = name
+  this.age = age
+  this.color = color
+}
 
+let siamese = new Cat(simba, 3, orange)
+
+console.log(siamese)
+
+
+
+
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
