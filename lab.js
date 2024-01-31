@@ -5,8 +5,20 @@
 */
 
 //Code here
+console.log("===============================")
 
 
+
+const me = {
+  name:"Derrick",
+  age: 39
+}
+
+console.log(me)
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
 
@@ -18,6 +30,20 @@
 //Code here
 
 
+const dog = {
+  name:"Teddy",
+  color:"Brown",
+  age: 7,
+  goodBoy: true
+}
+console.log("My dog's fur is ", dog.color)
+
+
+
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
@@ -25,13 +51,23 @@
 //Code here
 
 
+console.log("His name is ", dog.name)
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
 
+console.log("Using bracket-notation, my dog's fur is ", dog["color"])
 
+
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
 /*
@@ -41,12 +77,36 @@
 
 //Code here
 
+const favoriteThings ={
+  band: "The White Stripes",
+  food: "Burek",
+  person: "My Dad",
+  book: "The Martian",
+  movie: "Top Gun Maverick",
+  holiday: "Christmas"
+}
+console.log(favoriteThings)
+
+
+
+
+console.log("===============================")
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
 //Code here
+
+favoriteThings.car = "Jeep TJ"
+favoriteThings.show = "Lost"
+console.log(favoriteThings)
+
+
+
+
+
+console.log("===============================")
 
 
 /*
@@ -56,6 +116,15 @@
 
 //Code here
 
+favoriteThings.food = "Chicken Nuggets"
+favoriteThings.book = "Harry Potter"
+console.log(favoriteThings)
+
+
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
@@ -74,7 +143,15 @@ var carDetails = {
 
 //Code Here
 
+let {color, make, model, year} = carDetails
+console.log(color, make, model, year)
 
+
+
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
 
