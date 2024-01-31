@@ -308,15 +308,17 @@ console.log("===============================")
 //Code here
 
 class Cat {
-  constructor(name, age, color)
+  constructor(name, age, color){
   this.name = name
   this.age = age
   this.color = color
+  }
 }
 
-let siamese = new Cat(simba, 3, orange)
+let siamese = new Cat("simba", 3, "orange")
 
-console.log(siamese)
+console.log("dot-notation: ",siamese.name)
+console.log("bracket-notation: ",siamese["name"])
 
 
 
@@ -335,6 +337,29 @@ console.log("===============================")
 */
 
 //Code here
+
+class Wizard {
+  constructor(name, age, favoriteSpell){
+    this.name = name
+    this.age = age
+    this.favoriteSpell = favoriteSpell
+  }
+
+  castSpell = () =>{                                        // put the function INSIDE the class and then ...
+    console.log(`${theWhite.name} has cast ${theWhite.favoriteSpell} onto the orcs`)
+  }
+}
+
+let theWhite = new Wizard("Gandalf", "unknown years of age", "Lightening")    // create a new instance from the class
+
+theWhite.castSpell()                                      // call the function using the new instance
+
+
+
+
+
+
+console.log("===============================")
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -362,6 +387,32 @@ console.log("===============================")
 //Code Here
 
   
+class Phone {
+  constructor(brand,model,storage,color,price,sold){
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.price = price
+    this.sold = false
+  }
+  sell = () =>{
+   this.sold = true
+    console.log(`${this.brand} ${this.model} has been sold`)
+  }
+  
+  changePrice = (newPrice) =>{
+    this.price = newPrice
+
+  }
+}
+
+
+
+
+
+
+
 /*
     Next make three new phone instances using your class.
     Send in values of your choice. They should match these data types:
@@ -374,6 +425,15 @@ console.log("===============================")
 
 //Code Here
 
+let SKU500 = new Phone ("Apple", "iPhone SE", 500, "Gold", 599, false)
+let SKU501 = new Phone ("Samsung", "Galaxy Note", 600, "Silver",699, false)
+let SKU502 = new Phone ("Google", "Pixel 8", 400, "Red",399, false)
+
+
+
+console.log("===============================")
+
+
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -383,6 +443,12 @@ console.log("===============================")
 
 //Code Here 
 
+console.log("We need to change the price: ",SKU502)
+SKU502.changePrice(299)
+console.log("Did the price change? ",SKU502)
+
+
+console.log("===============================")
 
 /*
   Now call the sell method on one of your other phone objects
@@ -392,6 +458,10 @@ console.log("===============================")
 
 //Code Here 
 
+SKU502.sell()
+
+console.log(SKU502)
+console.log("===============================")
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
@@ -411,7 +481,16 @@ const colors = {
 
 //Code Here 
 
+const colorsCopy = {...colors}
+console.log(colorsCopy)
 
+
+
+
+
+
+
+console.log("===============================")
 
 /*
  Now use the spread operator to combine the following 2 objects into one. 
@@ -439,6 +518,15 @@ const shippingInfo = {
 
 //Code Here
 
+const helensInfo = {...contactInfo, ...shippingInfo}
+console.log(helensInfo)
+
+
+
+
+
+
+console.log("===============================")
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
 
